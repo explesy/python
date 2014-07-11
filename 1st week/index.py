@@ -2,15 +2,14 @@
 
 import random
 
-#random.seed()
-
 i = 1
 
 x = random.randint(1, 100)
 
 s = 0
 
-print(x)
+#We print result for testing purpose only
+print(x) 
 
 print("Hello, my friend!")
 print("Try to guess a number [1..100]")
