@@ -9,7 +9,7 @@ def input_int(a, b):
 		x = input()
 		if x.isdigit():
 			if(int(x) >= a and int(x) <= b):
-				return (x)
+				return x
 			else:
 				print("Only in [{}, {}] range. Try more.".format(a,b))
 		else:

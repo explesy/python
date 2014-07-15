@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
+from math import sqrt
+
 def maximum_prime(n):
 	m = 2
-	border = int(round(n ** 0.5))
+	border = int(round(sqrt(n)))
 	result = []
 	while(m <= border):
 		# print(result, m)
@@ -13,7 +15,7 @@ def maximum_prime(n):
 				result.append(n/m)
 		m += 1
 
-	return max(result)
+	return int(max(result))
 
 
 # Shitty algothm for prime checking
@@ -27,5 +29,3 @@ def is_prime(number):
 
 
 print (maximum_prime(4294967297))
-
-

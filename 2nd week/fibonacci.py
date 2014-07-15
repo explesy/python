@@ -19,8 +19,7 @@ def fibo(n):
 
 # Non recursive function for calculate Fibonacci sequence
 def nacci(n):
-	if n == 0: return n
-	if n == 1: return n
+	if (n == 0 or n == 1): return n
 	p = 0
 	k = 1
 	result = 1
