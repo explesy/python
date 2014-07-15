@@ -5,17 +5,16 @@ from math import sqrt
 def maximum_prime(n):
 	if(is_prime(n)):
 		return n
-	m = 2
-	border = int(round(sqrt(n)))
+	m = int(round(sqrt(n)))
 	result = []
-	while(m <= border):
+	while(m >= 2):
 		# print(result, m)
 		if(n % m == 0):
 			if(is_prime(m)):
 				result.append(m)
 			if(is_prime(int(n/m))):
 				result.append(n/m)
-		m += 1
+		m -= 1
 
 	return int(max(result))
 
