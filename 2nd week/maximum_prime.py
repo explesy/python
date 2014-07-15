@@ -3,6 +3,8 @@
 from math import sqrt
 
 def maximum_prime(n):
+	if(is_prime(n)):
+		return n
 	m = 2
 	border = int(round(sqrt(n)))
 	result = []
@@ -27,5 +29,13 @@ def is_prime(number):
 	return True
 
 
+def test():
+	#Big number test
+	print (maximum_prime(4294967297))
 
-print (maximum_prime(4294967297))
+	#Range test
+	for i in range(1, 101):
+		print (i, maximum_prime(i))
+
+
+test()
