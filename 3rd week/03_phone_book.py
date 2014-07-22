@@ -10,18 +10,24 @@ def pb_fill():
 		Format: <phone_number> \t <name> \n
 	 """
 
-	number_of_records = 10000
+	number_of_records = 100000
+
+	phones = set()
+	names = []
+
+	while(len(phones) < number_of_records):
+		phones.add(random.randint(1000000, 9999999))
+		names.append(''.join(random.choice(string.ascii_uppercase + string.ascii_lowercase) for x in range(random.randint(4, 10))))
+
+	phones = tuple(phones)
 
 	file = open('p_book.dat', 'w') 
 
 	for i in range(number_of_records):
 
-		phone = random.randint(1000000, 9999999)
-		name = ''.join(random.choice(string.ascii_uppercase + string.ascii_lowercase) for x in range(random.randint(4, 10)))
+		# print(phones[i], names[i])
 
-		# print(phone, name)
-
-		line = "{}\t{}\n".format(phone, name)
+		line = "{}\t{}\n".format(phones[i], names[i])
 
 		file.write(line)
 
@@ -110,7 +116,7 @@ def pb_get_name_comparison(f, g, number):
 	""" Here we will know who's faster and who have better performance.
 		pb_get_name() vs pb_get_name_bi_way() """
 
-	n = 10000
+	n = 5
 	counter = 0 
 	time_sum_one = 0
 	time_sum_two = 0
@@ -168,5 +174,5 @@ def test():
 		pb_get_name_comparison(pb_get_name, pb_get_name_bi_way, number_for_test)
 
 
-create()
+# create()
 test()
