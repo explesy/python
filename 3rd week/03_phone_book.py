@@ -100,7 +100,7 @@ def pb_get_name_bi_way(phone):
 	bottom = 0
 	head = len(pb) - 1 
 	while bottom < head:
-		middle = int((bottom + head)/2)
+		middle = (bottom + head)//2
 		# print(pb[bottom][0], pb[middle][0], pb[head][0], phone)
 		if(phone > int(pb[middle][0])):
 			bottom = middle + 1  # we have plus one because one line above we use straight greater
