@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-
 def longest_palindrome(poly):
+	''' Return longest polindrome in given string '''
 
 	n = 2
 	substrings = []
