@@ -7,7 +7,6 @@ lock2 = Lock()
 lock3 = Lock()
 lock4 = Lock()
 
-# lock1.acquire()
 lock2.acquire()
 
 def f():
